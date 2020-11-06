@@ -6,6 +6,7 @@ import EventForm from '../../features/events/eventForm/EventForm';
 import HomePage from '../../features/home/HomePage';
 import NavBar from '../../features/nav/NavBar';
 import Sandbox from '../../features/sandbox/Sandbox';
+import ModalsManager from '../common/modals/ModalsManager';
 
 const {
   default: EventDashboard,
@@ -15,6 +16,7 @@ function App() {
   const {key} = useLocation();
   return (
     <Fragment>
+      <ModalsManager />
       <Route exact path='/' component={HomePage} />
       <Route path={'/(.+)'} render={() => (
         <Fragment>
