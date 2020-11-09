@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { Route, useLocation } from 'react-router-dom';
 import { Container } from 'semantic-ui-react';
+import {ToastContainer} from 'react-toastify';
 import EventDetailed from '../../features/events/eventDetailed/EventDetailed';
 import EventForm from '../../features/events/eventForm/EventForm';
 import HomePage from '../../features/home/HomePage';
@@ -17,6 +18,7 @@ function App() {
   return (
     <Fragment>
       <ModalsManager />
+      <ToastContainer position='bottom-right' hideProgressBar />
       <Route exact path='/' component={HomePage} />
       <Route path={'/(.+)'} render={() => (
         <Fragment>
