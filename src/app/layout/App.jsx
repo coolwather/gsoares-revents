@@ -8,6 +8,7 @@ import HomePage from '../../features/home/HomePage';
 import NavBar from '../../features/nav/NavBar';
 import Sandbox from '../../features/sandbox/Sandbox';
 import ModalsManager from '../common/modals/ModalsManager';
+import ErrorComponent from '../common/errors/ErrorComponent';
 
 const {
   default: EventDashboard,
@@ -28,6 +29,7 @@ function App() {
             <Route exact path='/sandbox' component={Sandbox} />
             <Route path='/events/:id' component={EventDetailed} />
             <Route path={['/createEvent', '/manage/:id']} component={EventForm} key={key} />
+            <Route path='/error' component={ErrorComponent} />
           </Container>
         </Fragment>
       )} />
